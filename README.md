@@ -1,3 +1,2 @@
-# angular-bgm4ka
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-bgm4ka)
+##ANGULAR PROJECTS
+These are stored under different branches.
