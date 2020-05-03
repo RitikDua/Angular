@@ -1,0 +1,15 @@
+button{
+  padding:7px;
+  margin:10px;
+  border:0px;
+  font-style: 'Helvetica';
+  background-color: rgba(12,12,202,0.8);
+  color:white;
+  font-weight: bolder;
+}
+p{
+  border-radius:'1px solid  rgba(12,12,202,0.8)';
+  padding:19px;  
+  font-style: Helvetica;
+  font-size: 19px;
+}
