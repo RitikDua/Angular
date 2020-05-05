@@ -16,7 +16,7 @@ export class Question{
 		}
 	}
 	isAnswered(){
-		return this.answer==undefined||this.answer.post.length==0;
+		return !(this.answer==undefined||this.answer.post.length==0);
 	}
 
 }

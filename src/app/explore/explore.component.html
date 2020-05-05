@@ -1,5 +1,17 @@
 	<H1>Explore</H1>
 <div class="container">
+	<div class="row form-group" *ngFor="let article of getArticles()" >
+	<label for="que">
+	Que:</label>
+	<h3 id="que">{{article.question.question}}
+</h3>
+	<label id="answer">Ans.</label>
+	<input type='text' #ans id="answer" />
+	<button (click)="submitAns(ans,article)">Post</button>
+	</div>
 
-	<app-article *ngFor="let article of getArticles()" [article]="article"></app-article>
+</div>
+
+<div class="Asked">
+
 </div>
