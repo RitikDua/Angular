@@ -8,13 +8,20 @@ import {Answer} from '../answer/answer.model';
   styleUrls: ['./explore.component.css']
 })
 export class ExploreComponent implements OnInit {
-  article:Article
+  articles:Article[]
   constructor() {
 
-  	this.article=(new Article(new Question("What is your name",new Answer("Ritik Dua",9))))
-   	// console.log(this.article);
+  	this.articles=[
+  	new Article(new Question("What is your name",new Answer("Ritik Dua",9))),
+  	new Article(new Question("What is your name",new Answer("Ritik Dua",9))),
+  	new Article(new Question("What is your Age"))
+  	]
+   	console.log(this.articles);
    }
-
+   getArticles():Article[]{
+   	// console.log(this.articles.filter(w=>w.question.isAnswered()));
+   	return this.articles.filter(x=>!x.question.isAnswered());//filter(w=>w.question.isAnswered());
+   }
   ngOnInit(): void {
   }
 

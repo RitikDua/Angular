@@ -11,5 +11,6 @@ export class Answer{
 	voteDown():void{
 		this.votes--;
 	}
+	
 
 }

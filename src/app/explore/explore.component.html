@@ -1,5 +1,5 @@
 	<H1>Explore</H1>
 <div class="container">
 
-	<app-article [article]="article"></app-article>
+	<app-article *ngFor="let article of getArticles()" [article]="article"></app-article>
 </div>
