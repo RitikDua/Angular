@@ -1,12 +1,21 @@
-<ul class="list-inline">
-  <li><h3 (click)="check()">Explore</h3>
+<ul  class="list-inline">
+  <li><h3 (click)="choice='Explore'">Explore</h3>
   </li>
 
-  <li><h3 (click)="check()">Home</h3>
+  <li><h3 (click)="choice='Home'">Home</h3>
   </li>
-  </ul>
-<div class="container">
+
+  <li><h3 (click)="choice='Ask'">Ask</h3>
+  </li>
+ </ul>
+ {{choice}}
+<div class="container" >
   <!--flag=true is explore--->
-  <app-explore *ngIf="flag"></app-explore>
-  <app-home *ngIf="!flag"></app-home>
+  <app-explore *ngIf="choice=='Explore'"></app-explore>
+  <app-home [questions]="changeToChild()" *ngIf="choice=='Home'" 
+
+  ></app-home>
+  <app-ask *ngIf="choice=='Ask'" [question]="question"
+  (notify)="changeFromChild($event)"
+  ></app-ask>
 </div>

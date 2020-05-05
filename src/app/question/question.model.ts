@@ -4,21 +4,19 @@ export class Question{
 	answer:Answer;
 	isAns:boolean;
 
-	constructor(question:string,answer:Answer)
+	constructor(question:string,...args)
 	{
 		this.question=question;
-		this.answer=answer;
-		// console.log(answer);
-		if(answer==undefined){//||answer.post.length==0){
-			this.isAns=!true;
+		
+		if(args.length==0){
+			this.answer=undefined;
 		}
 		else{
-			this.isAns=true;
-			this.answer=this.answer;
+			this.answer=args[0];
 		}
 	}
 	isAnswered(){
-		return this.isAns;
+		return this.answer==undefined||this.answer.post.length==0;
 	}
 
 }
