@@ -19,11 +19,11 @@ export class AppComponent {
   constructor(){
   	this.questions=[];
     this.articles=[
-      new Article(new Question("How",new Answer("you",1))),
-,     new Article(new Question("ow",new Answer("o",11))),
-,     new Article(new Question("ow",new Answer("u",1))),
-     new Article(new Question("Howasd")),
-,     new Article(new Question("Howasd")),
+      new Article(new Question("What is Angular?",new Answer("Angular is a front end framework.",1))),
+,     new Article(new Question("Which company developed Angular?",new Answer("Google",11))),
+,     new Article(new Question("What is the name of an another front end framework?",new Answer("ReactJs",1))),
+     new Article(new Question("How are you?")),
+,     new Article(new Question("What is your name?")),
 
     ];
 
