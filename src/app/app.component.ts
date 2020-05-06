@@ -1,6 +1,7 @@
 import { Component ,Output,EventEmitter} from '@angular/core';
 import {Question} from './question/question.model';
 import {Article} from './article/article.model';
+import {Answer} from './answer/answer.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,7 +18,15 @@ export class AppComponent {
     // question:Question;
   constructor(){
   	this.questions=[];
-    this.articles=[];
+    this.articles=[
+      new Article(new Question("How",new Answer("you",1))),
+,     new Article(new Question("ow",new Answer("o",11))),
+,     new Article(new Question("ow",new Answer("u",1))),
+     new Article(new Question("Howasd")),
+,     new Article(new Question("Howasd")),
+
+    ];
+
   }
   changeFromChild(data){
   	console.log(data);
@@ -28,7 +37,7 @@ export class AppComponent {
   changeToQue(){
     return this.questions;
   }
-  changeToArticle(){
+  changeToArticles(){
     return this.articles;
   }
 

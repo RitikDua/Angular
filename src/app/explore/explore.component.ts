@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit,Output,EventEmitter ,Input} from '@angular/core';
 import {Article} from '../article/article.model';
 import {Question} from '../question/question.model';
 import {Answer} from '../answer/answer.model';
@@ -10,11 +10,12 @@ import {Answer} from '../answer/answer.model';
 })
 export class ExploreComponent implements OnInit {
   @Input() questions:Question[];
-  articles:Article[]
+  @Input() articles:Article[];
+  @Output() notify:EventEmitter<Article[]>=new EventEmitter<Article[]>();
+  // articles:Article[]
   constructor() {
 
-//   	console.log(this.articles);
-   }
+  }
       getArticles():Article[]{
    	// console.log(this.articles.filter(w=>w.question.isAnswered()));
    	return this.articles.filter(x=>!x.question.isAnswered());//filter(w=>w.question.isAnswered());
@@ -31,7 +32,7 @@ this.articles.push(article);
   
 
   ngOnInit(): void {
-   this.articles=[];
+   // this.articles=[];
   	
 console.log(this.questions);
 this.questions.map(q=>this.articles.push(new Article(q)));

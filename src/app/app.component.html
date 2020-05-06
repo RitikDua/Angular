@@ -11,8 +11,11 @@
  {{choice}}
 <div class="container" >
   <!--flag=true is explore--->
-  <app-explore [questions]="changeToQue()" *ngIf="choice=='Explore'"></app-explore>
+  <app-explore [questions]="changeToQue()" 
+ [articles]="changeToArticles()"
+  *ngIf="choice=='Explore'"></app-explore>
   <app-home [questions]="changeToQue()"
+  [articles]="changeToArticles()"
    *ngIf="choice=='Home'" 
    ></app-home>
   <app-ask *ngIf="choice=='Ask'" [question]="question"
