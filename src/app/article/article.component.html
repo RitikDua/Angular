@@ -1,7 +1,10 @@
 
 
-<div class="articl">
-<h3>Question:{{article.question.question}}</h3>
-<h3 *ngIf="article.question.isAnswered()">Answer:<app-answer [answer]="article.question.answer"></app-answer></h3>
+<div class="articl" style="border:1px solid rgba(0,0,0,0.4);border-radius: 20px;padding:19px;margin:9px;  box-shadow: 2px 4px #888888;">
+<h3 style=" font-family: 'Helvetica', 'Arial', sans-serif;
+    color:rgba(0,0,0,0.9);
+    font-weight: bolder;
+    ">{{article.question.question}}</h3>
+<h3 *ngIf="article.question.isAnswered()"><app-answer [answer]="article.question.answer"></app-answer></h3>
 </div>
 

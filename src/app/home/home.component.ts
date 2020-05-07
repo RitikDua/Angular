@@ -7,7 +7,7 @@ import {Question} from '../question/question.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-@Input() questions:Question[];
+// @Input() questions:Question[];
   // @Output() notify:EventEmitter<Question[]>=new EventEmitter<Question[]>();
  @Input() articles:Article[];
 
@@ -16,8 +16,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
   	
-console.log(this.questions);
-this.questions.map(q=>this.articles.push(new Article(q)));
+// console.log(this.questions);
+// this.questions.map(q=>this.articles.push(new Article(q)));
   
   }
 

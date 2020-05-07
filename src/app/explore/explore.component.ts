@@ -35,7 +35,7 @@ this.articles.push(article);
    // this.articles=[];
   	
 console.log(this.questions);
-this.questions.map(q=>this.articles.push(new Article(q)));
+// this.questions.map(q=>this.articles.push(new Article(q)));
  
   }
 
